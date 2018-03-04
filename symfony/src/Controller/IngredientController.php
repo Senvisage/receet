@@ -53,10 +53,17 @@ class IngredientController extends Controller
         if( $form->isSubmitted() ){
             if($form->isValid()) {
                 $newIngredient = $form->getData();
+
+                //Traitements Illustration
                 $file = $newIngredient->getIllustration();
                 $definitiveFileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
                 $file->move($this->getParameter('upload_illustrations_directory').'/ingredient',$definitiveFileName);
                 $newIngredient->setIllustration($definitiveFileName);
+
+                //Ajout auto d'un tag correspondant au nom
+                $newIngredient->addTag($newIngredient->getName());
+
+                //Enregistrement
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($newIngredient);
                 $manager->flush();
@@ -83,10 +90,17 @@ class IngredientController extends Controller
         if( $form->isSubmitted() ){
             if($form->isValid()) {
                 $newIngredient = $form->getData();
+
+                //Traitements Illustration
                 $file = $newIngredient->getIllustration();
                 $definitiveFileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
                 $file->move($this->getParameter('upload_illustrations_directory').'/ingredient',$definitiveFileName);
                 $newIngredient->setIllustration($definitiveFileName);
+
+                //Ajout auto d'un tag correspondant au nom
+                $newIngredient->addTag($newIngredient->getName());
+
+                //Enregistrement
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($newIngredient);
                 $manager->flush();

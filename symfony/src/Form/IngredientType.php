@@ -55,6 +55,13 @@ class IngredientType extends AbstractType
                     'required'=>true
                 ]
             )
+            ->add("tags",
+                TagsType::class,
+                [
+                    'attr'=>["placeholder"=>"Entrez les tags à associer à l'ingrdeient"],
+                    'required'=>false
+                ]
+            )
             ->add("illustration",
                 FileType::class,
                 [

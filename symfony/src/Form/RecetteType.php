@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
 class RecetteType extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver)
@@ -51,6 +52,13 @@ class RecetteType extends AbstractType
                 [
                     'attr'=>["placeholder"=>"Entrez les différentes étapes"],
                     'required'=>true
+                ]
+            )
+            ->add("tags",
+                TagsType::class,
+                [
+                    'attr'=>["placeholder"=>"Entrez les tags à associer à l'ingrdeient"],
+                    'required'=>false
                 ]
             )
             ->add("illustration",

@@ -53,10 +53,17 @@ class RecetteController extends Controller
         if( $form->isSubmitted() ){
             if($form->isValid()) {
                 $newRecette = $form->getData();
+
+                //Traitements Illustration
                 $file = $newRecette->getIllustration();
                 $definitiveFileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
                 $file->move($this->getParameter('upload_illustrations_directory').'/recette',$definitiveFileName);
                 $newRecette->setIllustration($definitiveFileName);
+
+                //Ajout auto d'un tag correspondant au nom
+                $newRecette->addTag($newRecette->getName());
+
+                //Enregistrement
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($newRecette);
                 $manager->flush();
@@ -83,10 +90,17 @@ class RecetteController extends Controller
         if( $form->isSubmitted() ){
             if($form->isValid()) {
                 $newRecette = $form->getData();
+
+                //Traitements Illustration
                 $file = $newRecette->getIllustration();
                 $definitiveFileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
                 $file->move($this->getParameter('upload_illustrations_directory').'/recette',$definitiveFileName);
                 $newRecette->setIllustration($definitiveFileName);
+
+                //Ajout auto d'un tag correspondant au nom
+                $newRecette->addTag($newRecette->getName());
+
+                //Enregistrement
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($newRecette);
                 $manager->flush();

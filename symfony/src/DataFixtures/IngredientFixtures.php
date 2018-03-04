@@ -19,7 +19,7 @@ class IngredientFixtures extends Fixture{
         $ingredient1->addTag($ingredient1->getName());
         $ingredient1->addTag('gluten');
         $ingredient1->addTag('feculent');
-        $ingredient1->addTag('nourriture-transformee');
+        $ingredient1->addTag('nourriture transformee');
         $manager->persist($ingredient1);
 
         $ingredient2 = new Ingredient();
