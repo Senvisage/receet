@@ -26,6 +26,15 @@ class RecetteRepository extends ServiceEntityRepository
             ->getQuery()
             ->getOneOrNullResult();
     }
+
+    public function findOneByRandom() {
+        $result = $this->createQueryBuilder('r')
+            ->getQuery()
+            ->getArrayResult();
+        shuffle($result);
+        //var_dump($result);die();
+        return $result[0];
+    }
     /*
     public function findBySomething($value)
     {
