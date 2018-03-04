@@ -36,6 +36,8 @@ class RecetteController extends Controller
      * @Route("/recette/delete/{id}", name="recette_delete")
      */
     public function recetteDelete(Recette $recette) {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($recette);
         $em->flush();
@@ -45,6 +47,8 @@ class RecetteController extends Controller
      *@Route("/recette/add", name="recette_add")
      */
     public function addRecette( Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $recette = new Recette();
         $form = $this->createForm(RecetteType::class, $recette);
         $form->add('save', SubmitType::class);
@@ -83,6 +87,8 @@ class RecetteController extends Controller
      *@Route("/recette/edit/{id}", name="recette_edit", requirements={"id"="\d*"})
      */
     public function recetteEdit( Recette $recette, Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(RecetteType::class, $recette);
         $form->add('save', SubmitType::class);
         $form->handleRequest($request);

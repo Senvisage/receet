@@ -37,6 +37,8 @@ class LinkIngredientRecetteController extends Controller
      * @Route("/linkingredientrecette/delete/{id}", name="linkingredientrecette_delete")
      */
     public function linkingredientrecetteDelete(LinkIngredientRecette $ingredient) {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($ingredient);
         $em->flush();
@@ -46,6 +48,8 @@ class LinkIngredientRecetteController extends Controller
      *@Route("/linkingredientrecette/add", name="linkingredientrecette_add")
      */
     public function linkingredientrecetteAdd( Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $ingredient = new LinkIngredientRecette();
         $form = $this->createForm(LinkIngredientRecetteType::class, $ingredient);
         $form->add('save', SubmitType::class);
@@ -73,6 +77,8 @@ class LinkIngredientRecetteController extends Controller
      *@Route("/linkingredientrecette/edit/{id}", name="linkingredientrecette_edit", requirements={"id"="\d*"})
      */
     public function linkingredientrecetteEdit( LinkIngredientRecette $ingredient, Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(LinkIngredientRecetteType::class, $ingredient);
         $form->add('save', SubmitType::class);
         $form->handleRequest($request);

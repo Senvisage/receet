@@ -36,6 +36,8 @@ class UtilisateurController extends Controller
      * @Route("/utilisateur/delete/{id}", name="utilisateur_delete")
      */
     public function utilisateurDelete(Utilisateur $utilisateur) {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($utilisateur);
         $em->flush();
@@ -45,6 +47,8 @@ class UtilisateurController extends Controller
      *@Route("/utilisateur/add", name="utilisateur_add")
      */
     public function utilisateurAdd( Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $utilisateur = new Utilisateur();
         $form = $this->createForm(UtilisateurType::class, $utilisateur);
         $form->add('save', SubmitType::class);
@@ -76,6 +80,8 @@ class UtilisateurController extends Controller
      *@Route("/utilisateur/edit/{id}", name="utilisateur_edit", requirements={"id"="\d*"})
      */
     public function utilisateurEdit( Utilisateur $utilisateur, Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(UtilisateurType::class, $utilisateur);
         $form->add('save', SubmitType::class);
         $form->handleRequest($request);

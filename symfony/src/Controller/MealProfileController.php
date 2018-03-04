@@ -37,6 +37,8 @@ class MealProfileController extends Controller
      * @Route("/mealprofile/delete/{id}", name="mealprofile_delete")
      */
     public function mealprofileDelete(MealProfile $mealprofile) {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($mealprofile);
         $em->flush();
@@ -46,6 +48,8 @@ class MealProfileController extends Controller
      *@Route("/mealprofile/add", name="mealprofile_add")
      */
     public function addMealprofile( Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $mealprofile = new MealProfile();
         $form = $this->createForm(MealProfileType::class, $mealprofile);
         $form->add('save', SubmitType::class);
@@ -73,6 +77,8 @@ class MealProfileController extends Controller
      *@Route("/mealprofile/edit/{id}", name="mealprofile_edit", requirements={"id"="\d*"})
      */
     public function mealprofileEdit( MealProfile $mealprofile, Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(MealProfileType::class, $mealprofile);
         $form->add('save', SubmitType::class);
         $form->handleRequest($request);

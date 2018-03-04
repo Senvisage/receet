@@ -12,7 +12,7 @@
         {% for cur_utilisateur in utilisateurs %}
             <li>
                 {{ cur_utilisateur.username }} ({{ cur_utilisateur.email }})
-                {% if is_granted('ROLE_USER') %}
+                {% if is_granted('ROLE_ADMIN') %}
                     (<a href="{{ path('utilisateur_edit', {'id':cur_utilisateur.id}) }}">Edit</a> - <a href="{{ path('utilisateur_delete', {'id':cur_utilisateur.id}) }}">Delete</a>)
                 {% endif %}
             </li>

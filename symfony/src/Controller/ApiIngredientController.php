@@ -79,32 +79,7 @@ class ApiIngredientController extends Controller
      * @Method("POST")
      */
     public function ingredientAdd( Request $request ){
-        $ingredient = new Ingredient();
-        $form = $this->createForm(IngredientType::class, $ingredient);
-        $form->add('save', SubmitType::class);
-        $form->handleRequest($request);
-        $msg = "";
-        if( $form->isSubmitted() ){
-            if($form->isValid()) {
-                $newIngredient = $form->getData();
-                $file = $newIngredient->getIllustration();
-                $definitiveFileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
-                $file->move($this->getParameter('upload_illustrations_directory').'/ingredient',$definitiveFileName);
-                $newIngredient->setIllustration($definitiveFileName);
-                $manager = $this->getDoctrine()->getManager();
-                $manager->persist($newIngredient);
-                $manager->flush();
-                $msg = 'Ingrédient ajouté en base avec succès';
-            } else {
-                $msg = 'Vous avez oublié de remplir un champ !';
-            }
-        }
-        return $this->render("ingredient/form.html.twig",
-            array(
-                "form"=>$form->createView(),
-                "message"=>$msg
-            )
-        );
+        //TODO
     }
 
 

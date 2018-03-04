@@ -36,6 +36,8 @@ class IngredientController extends Controller
      * @Route("/ingredient/delete/{id}", name="ingredient_delete")
      */
     public function ingredientDelete(Ingredient $ingredient) {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $em = $this->getDoctrine()->getManager();
         $em->remove($ingredient);
         $em->flush();
@@ -45,6 +47,8 @@ class IngredientController extends Controller
      *@Route("/ingredient/add", name="ingredient_add")
      */
     public function ingredientAdd( Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $ingredient = new Ingredient();
         $form = $this->createForm(IngredientType::class, $ingredient);
         $form->add('save', SubmitType::class);
@@ -83,6 +87,8 @@ class IngredientController extends Controller
      *@Route("/ingredient/edit/{id}", name="ingredient_edit", requirements={"id"="\d*"})
      */
     public function ingredientEdit( Ingredient $ingredient, Request $request ){
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(IngredientType::class, $ingredient);
         $form->add('save', SubmitType::class);
         $form->handleRequest($request);

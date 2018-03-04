@@ -12,7 +12,7 @@
         {% for cur_recette in recettes %}
             <li>
                 <a href="{{ path('recette_detail', {'id':cur_recette.id}) }}">{{ cur_recette.name }}</a>
-            {% if is_granted('ROLE_USER') %}
+            {% if is_granted('ROLE_ADMIN') %}
                 (<a href="{{ path('recette_edit', {'id':cur_recette.id}) }}">Edit</a> - <a href="{{ path('recette_delete', {'id':cur_recette.id}) }}">Delete</a>)
             {% endif %}
             </li>

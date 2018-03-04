@@ -32,9 +32,14 @@
                         <a href="{{ path('recette_list') }}" class="nrm">RECETTES</a>
                     </li>
                     <li class="mob-12 tab-6 dsk-2">
-                        MENU DE LA SEMAINE
+                        <a href="{{ path('linkingredientrecette_list') }}" class="nrm">LINKS I/R</a>
                     </li>
-
+                    <li class="mob-12 tab-6 dsk-2">
+                        <a href="{{ path('mealprofile_list') }}" class="nrm">PREFERENCES</a>
+                    </li>
+                    <li class="mob-12 tab-6 dsk-2">
+                        <a href="{{ path('utilisateur_list') }}" class="nrm">UTILISATEURS</a>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -44,23 +49,6 @@
         </main>
     <!-- ---------------------------------------------------------------------------------------------------- Footer -->
         <footer class="mob-12 tab-12 dsk-12 bgcolor-4 shadow size-s">
-            <ul class="mob-12 tab-12 dsk-12 grid ">
-                <li class="mob-12 tab-6 dsk-2">
-                    <a href="{{ path('ingredient_list') }}" class="nrm">INGREDIENTS</a>
-                </li>
-                <li class="mob-12 tab-6 dsk-2">
-                    <a href="{{ path('recette_list') }}" class="nrm">RECETTES</a>
-                </li>
-                <li class="mob-12 tab-6 dsk-2">
-                    <a href="{{ path('linkingredientrecette_list') }}" class="nrm">LINKS I/R</a>
-                </li>
-                <li class="mob-12 tab-6 dsk-2">
-                    <a href="{{ path('mealprofile_list') }}" class="nrm">PREFERENCES</a>
-                </li>
-                <li class="mob-12 tab-6 dsk-2">
-                    <a href="{{ path('utilisateur_list') }}" class="nrm">UTILISATEURS</a>
-                </li>
-            </ul>
         </footer>
         {% block javascripts %}{% endblock %}
     </body>
