@@ -13,7 +13,7 @@ const httpOptions = {
 
 @Injectable()
 export class ReceetApiService {
-  private apiUrl = 'http://localhost/Fullstack/receet/api/public/api/';
+  private apiUrl = 'http://localhost/receet/symfony/public/api/';
 
   constructor(private http: HttpClient) { }
   private handleError<T> (operation = 'operation', result?: T) {
@@ -24,25 +24,27 @@ export class ReceetApiService {
   }
 
   getRecettes(): Observable<Recette[]> {
-    return this.http.get<Recette[]>(this.apiUrl + `recettes`).pipe(
-        map(data => data['hydra:member']),
+    return this.http.get<Recette[]>(this.apiUrl + `recette`).pipe(
         catchError(this.handleError<Recette[]>('getRecettes', [])));
   }
   getRecette(id: number): Observable<Recette> {
-    return this.http.get<Recette>(this.apiUrl + `recettes/` + id).pipe(
+    return this.http.get<Recette>(this.apiUrl + `recette/` + id).pipe(
         catchError(this.handleError<Recette>('getRecette:' + id, null)));
   }
+  getRecetteRandom(): Observable<Recette> {
+    return this.http.get<Recette>(this.apiUrl + `recette/random`).pipe(
+        catchError(this.handleError<Recette>('getRecetteRandom', null)));
+  }
+
   deleteRecette(recette: Recette | number): Observable<Recette> {
     const id = typeof recette === 'number' ? recette : recette.id;
-
-    return this.http.delete<Recette>(this.apiUrl + `recettes/` + id, httpOptions).pipe(
+    return this.http.delete<Recette>(this.apiUrl + `recette/` + id, httpOptions).pipe(
         catchError(this.handleError<Recette>('deleteRecette'))
     );
   }
 
   getIngredients(): Observable<Ingredient[]> {
-    return this.http.get<Ingredient[]>(this.apiUrl + `ingredients`).pipe(
-        map(data => data['hydra:member']),
+    return this.http.get<Ingredient[]>(this.apiUrl + `ingredient`).pipe(
         catchError(this.handleError<Ingredient[]>('getIngredients', [])));
   }
 }

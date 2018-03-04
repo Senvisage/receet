@@ -16,7 +16,7 @@ export class RecettesComponent implements OnInit {
 
   rerollHandler(recette: any): void {
 
-    this.receetApiService.getRecette(3)
+    this.receetApiService.getRecetteRandom()
         .subscribe(
             (data) => {
               const index: number = this.recettes.indexOf(recette);

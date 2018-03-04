@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Recette }            from '../../entities/recette';
 
 @Component({
   selector: 'app-recette-thumb',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recette-thumb.component.css']
 })
 export class RecetteThumbComponent implements OnInit {
+  @Output()
+  public onreroll:EventEmitter<any> = null;
 
-  constructor() { }
+  @Input()
+  recette: Recette;
 
+  constructor() {
+    this.onreroll = new EventEmitter<any>();
+  }
   ngOnInit() {
+
   }
 
+  rerollRecette() {
+    this.onreroll.emit(this.recette);
+  }
 }

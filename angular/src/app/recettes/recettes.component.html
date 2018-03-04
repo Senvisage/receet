@@ -5,7 +5,9 @@
   <main class="bgcolor-3 shadow margin-sm ui-g-10">
     <h1 class="size-xl">Liste des Recettes :</h1>
 
-    <app-recette-thumb *ngFor="let recette of recettes"></app-recette-thumb>
+    <app-recette-thumb *ngFor="let recette of recettes"
+                       [recette]="recette"
+                       (onreroll)="rerollHandler($event)"></app-recette-thumb>
 
   </main>
 </div>
