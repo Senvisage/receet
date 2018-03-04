@@ -133,6 +133,7 @@ class IngredientFixtures extends Fixture{
         $this->addReference('ingre-pates', $ingredient01);
         $this->addReference('ingre-riz', $ingredient02);
         $this->addReference('ingre-nori', $ingredient03);
+        $this->addReference('ingre-03', $ingredient03);
         $this->addReference('ingre-04', $ingredient04);
         $this->addReference('ingre-05', $ingredient05);
         $this->addReference('ingre-06', $ingredient06);
