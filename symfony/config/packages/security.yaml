@@ -1,0 +1,44 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        from_db:
+            entity:
+                class: App\Entity\Utilisateur
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            form_login:
+                login_path: login
+                check_path: login
+            provider: from_db
+
+            #Using the SecurityBundle automated route
+            logout:
+                path:   /logout
+                target: /
+    encoders:
+        App\Entity\Utilisateur:
+            algorithm: bcrypt
+            cost: 12
+    role_hierarchy:
+        ROLE_COOK: [ROLE_USER]
+        ROLE_ADMIN: [ROLE_USER, ROLE_COOK]
+        ROLE_SUPER_ADMIN: [ROLE_COOK, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+
+    access_control:
+        - { path: edit, roles: ROLE_ADMIN }
+        - { path: delete, roles: ROLE_ADMIN }

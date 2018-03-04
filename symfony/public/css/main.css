@@ -1,0 +1,25 @@
+body {
+    margin-top: 40pt;
+}
+header {
+    height: 40pt;
+    display: flex;
+    flex-flow: row wrap;
+    top: 0;
+    position: fixed;
+}
+footer {
+    height: 40pt;
+    bottom:0;
+    position: fixed;
+}
+#wrapper {
+
+}
+main {
+
+}
+
+a {
+    color: darkslategray;
+}

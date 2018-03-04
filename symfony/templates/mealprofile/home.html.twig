@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Meal Profiles
+{% endblock %}
+{% block title %}
+    Receet - Meal Profiles
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for cur_profile in mealprofiles %}
+            <li>
+                L'User {{ cur_profile.utilisateur.username }} demande à créer un menu pour {{ cur_profile.nbPersonnes }} personnes et {{ cur_profile.nbJours }} jours.
+            {% if is_granted('ROLE_USER') %}
+                (<a href="{{ path('mealprofile_edit', {'id':cur_profile.id}) }}">Edit</a> - <a href="{{ path('mealprofile_delete', {'id':cur_profile.id}) }}">Delete</a>)
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul><br>
+    <p><a href="{{ path('mealprofile_add') }}">Ajouter un MealProfile</a></p>
+{% endblock %}

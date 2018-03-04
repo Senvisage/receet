@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Ingrédients
+{% endblock %}
+{% block title %}
+    Receet - Ingrédients
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for cur_ingredient in ingredients %}
+            <li>
+                <a href="{{ path('ingredient_detail', {'id':cur_ingredient.id}) }}">{{ cur_ingredient.name }}</a>
+            {% if is_granted('ROLE_USER') %}
+                (<a href="{{ path('ingredient_edit', {'id':cur_ingredient.id}) }}">Edit</a> - <a href="{{ path('ingredient_delete', {'id':cur_ingredient.id}) }}">Delete</a>)
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul><br>
+    <p><a href="{{ path('ingredient_add') }}">Ajouter un ingrédient</a></p>
+{% endblock %}

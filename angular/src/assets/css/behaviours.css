@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------------------------------------------------- Behaviours */
+.size-xs { font-size: 0.6rem; }
+.size-s { font-size: 0.8rem; }
+.size-m { font-size: 1rem; }
+.size-l { font-size: 1.2rem; }
+.size-xl { font-size: 1.4rem; }
+
+.color-1 { color: #8EB9A8; }
+.color-2 { color: #FEFBD0; }
+.color-3 { color: #FDCFB7; }
+.color-4 { color: #F4828C; }
+.color-5 { color: #775D6A; }
+
+.bgcolor-1 { background-color: #8EB9A8; }
+.bgcolor-2 { background-color: #FEFBD0; }
+.bgcolor-3 { background-color: #FDCFB7; }
+.bgcolor-4 { background-color: #F4828C; }
+.bgcolor-5 { background-color: #775D6A; }
+
+.shadow { box-shadow: 1px 2px 14px -5px rgba(120,120,120,0.75); }
+.centered { display: flex; justify-content: center; align-items: center; }
+
+.margin-sm { margin: 5pt;}
+.margin-md { margin: 10pt;}
+.margin-xl { margin: 15pt;}
+

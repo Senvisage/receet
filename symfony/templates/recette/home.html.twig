@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Recettes
+{% endblock %}
+{% block title %}
+    Receet - Recettes
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for cur_recette in recettes %}
+            <li>
+                <a href="{{ path('recette_detail', {'id':cur_recette.id}) }}">{{ cur_recette.name }}</a>
+            {% if is_granted('ROLE_USER') %}
+                (<a href="{{ path('recette_edit', {'id':cur_recette.id}) }}">Edit</a> - <a href="{{ path('recette_delete', {'id':cur_recette.id}) }}">Delete</a>)
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul><br>
+    <p><a href="{{ path('recette_add') }}">Ajouter une recette</a></p>
+{% endblock %}

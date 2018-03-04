@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/behaviours.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+        <title>{% block head_title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body class="grid bgcolor-2">
+    <!-- ---------------------------------------------------------------------------------------------------- Header -->
+        <header class="mob-12 tab-12 dsk-12 bgcolor-4 shadow size-s">
+            <div class="mob-12 tab-12 dsk-12">
+                <div class="grid">
+                    <h1 class="mob-10 tab-10 dsk-10 size-xl">{% block title %}Welcome!{% endblock %}<span class="tab-0 dsk-0">(Mob)</span><span class="mob-0 dsk-0">(Tab)</span><span class="mob-0 tab-0">(Dsk)</span></h1>
+                    <div class="mob-2 tab-2 dsk-2 size-sm">
+                        {% if is_granted('ROLE_USER') %}
+                            <a href="{{ path('logout') }}">LOGOUT</a>
+                        {% else %}
+                            <a href="{{ path('login') }}">LOGIN</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <ul class="mob-12 tab-12 dsk-12 grid ">
+                    <li class="mob-12 tab-6 dsk-2">
+                        <a href="{{ path('ingredient_list') }}" class="nrm">INGREDIENTS</a>
+                    </li>
+                    <li class="mob-12 tab-6 dsk-2">
+                        <a href="{{ path('recette_list') }}" class="nrm">RECETTES</a>
+                    </li>
+                    <li class="mob-12 tab-6 dsk-2">
+                        MENU DE LA SEMAINE
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+    <!-- ------------------------------------------------------------------------------------------------------ Main -->
+        <main class="mob-12 tab-12 dsk-12 bgcolor-1 shadow size-m margin-sm">
+            {% block body %}PLACEHOLDER - MAIN BODY{% endblock %}
+        </main>
+    <!-- ---------------------------------------------------------------------------------------------------- Footer -->
+        <footer class="mob-12 tab-12 dsk-12 bgcolor-4 shadow size-s">
+            <ul class="mob-12 tab-12 dsk-12 grid ">
+                <li class="mob-12 tab-6 dsk-2">
+                    <a href="{{ path('ingredient_list') }}" class="nrm">INGREDIENTS</a>
+                </li>
+                <li class="mob-12 tab-6 dsk-2">
+                    <a href="{{ path('recette_list') }}" class="nrm">RECETTES</a>
+                </li>
+                <li class="mob-12 tab-6 dsk-2">
+                    <a href="{{ path('linkingredientrecette_list') }}" class="nrm">LINKS I/R</a>
+                </li>
+                <li class="mob-12 tab-6 dsk-2">
+                    <a href="{{ path('mealprofile_list') }}" class="nrm">PREFERENCES</a>
+                </li>
+                <li class="mob-12 tab-6 dsk-2">
+                    <a href="{{ path('utilisateur_list') }}" class="nrm">UTILISATEURS</a>
+                </li>
+            </ul>
+        </footer>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<div id="wrapper" class="ui-g">
+  <div id="left-menu" class="bgcolor-1 shadow margin-sm ui-g-2">
+    Menu gauche - Ingredients
+  </div>
+  <main class="bgcolor-3 shadow margin-sm ui-g-10">
+    <h1 class="size-xl">Liste des Ingredients :</h1>
+
+    <app-ingredient-thumb *ngFor="let ingredient of ingredients"></app-ingredient-thumb>
+
+  </main>
+</div>

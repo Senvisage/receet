@@ -1,0 +1,146 @@
+/* ------------------------------------------------------------------------------------------------------------- grid */
+@media only screen and (max-width: 480px){
+    .mob-0{ display: none; }
+    .mob-1{ width: 7.25%; box-sizing: border-box; }
+    .mob-2{ width: 14.50%; box-sizing: border-box; }
+    .mob-3{ width: 21.75%; box-sizing: border-box; }
+    .mob-4{ width: 29.00%; box-sizing: border-box; }
+    .mob-5{ width: 36.25%; box-sizing: border-box; }
+    .mob-6{ width: 43.50%; box-sizing: border-box; }
+    .mob-7{ width: 50.75%; box-sizing: border-box; }
+    .mob-8{ width: 58.00%; box-sizing: border-box; }
+    .mob-9{ width: 65.25%; box-sizing: border-box; }
+    .mob-10{ width: 72.50%; box-sizing: border-box; }
+    .mob-11{ width: 79.75%; box-sizing: border-box; }
+    .mob-12{ width: 100%; box-sizing: border-box; }
+    .mobmarg{ margin-left: 1.00%;  }
+    .grid{ display: flex; flex-wrap: wrap; }
+
+}
+@media only screen and (min-width: 481px) and (max-width: 800px){
+    .tab-0{ display: none; }
+    .tab-1{ width: 7.25%; box-sizing: border-box; }
+    .tab-2{ width: 14.50%; box-sizing: border-box; }
+    .tab-3{ width: 21.75%; box-sizing: border-box; }
+    .tab-4{ width: 29.00%; box-sizing: border-box; }
+    .tab-5{ width: 36.25%; box-sizing: border-box; }
+    .tab-6{ width: 43.50%; box-sizing: border-box; }
+    .tab-7{ width: 50.75%; box-sizing: border-box; }
+    .tab-8{ width: 58.00%; box-sizing: border-box; }
+    .tab-9{ width: 65.25%; box-sizing: border-box; }
+    .tab-10{ width: 72.50%; box-sizing: border-box; }
+    .tab-11{ width: 79.75%; box-sizing: border-box; }
+    .tab-12{ width: 100%; box-sizing: border-box; }
+    .tabmarg{ margin-left: 1.00%;  }
+    .grid{ display: flex; flex-wrap: wrap; }
+
+}
+@media only screen and (min-width: 801px) {
+    .dsk-0{ display: none; }
+    .dsk-1{ width: 7.25%; box-sizing: border-box; }
+    .dsk-2{ width: 14.50%; box-sizing: border-box; }
+    .dsk-3{ width: 21.75%; box-sizing: border-box; }
+    .dsk-4{ width: 29.00%; box-sizing: border-box; }
+    .dsk-5{ width: 36.25%; box-sizing: border-box; }
+    .dsk-6{ width: 43.50%; box-sizing: border-box; }
+    .dsk-7{ width: 50.75%; box-sizing: border-box; }
+    .dsk-8{ width: 58.00%; box-sizing: border-box; }
+    .dsk-9{ width: 65.25%; box-sizing: border-box; }
+    .dsk-10{ width: 72.50%; box-sizing: border-box; }
+    .dsk-11{ width: 79.75%; box-sizing: border-box; }
+    .dsk-12{ width: 100%; box-sizing: border-box; }
+    .dskmarg{ margin-left: 1.00%;  }
+    .grid{ display: flex; flex-wrap: wrap; }
+
+}
+
+/* ----------------------------------------------------------------------------------------------- behaviour keywords */
+
+.between{ display: flex; justify-content: space-between; }
+.around{ display: flex; justify-content: space-around; }
+.start{ display: flex; justify-content: flex-start; }
+.centered{ display: flex; justify-content: center; align-items: center; }
+.shadow { box-shadow: 1px 2px 14px -5px rgba(120,120,120,0.75); }
+
+/* -------------------------------------------------------------------------------------------------------- font-size */
+@media only screen and (max-width: 480px){
+    .size-xs { font-size: 0.7rem; }
+    .size-s { font-size: 0.9rem; }
+    .size-m { font-size: 1rem; }
+    .size-l { font-size: 1.1rem; }
+    .size-xl { font-size: 1.3rem; }
+}
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+    .size-xs { font-size: 0.8rem; }
+    .size-s { font-size: 1rem; }
+    .size-m { font-size: 1.2rem; }
+    .size-l { font-size: 1.4rem; }
+    .size-xl { font-size: 1.7rem; }
+}
+@media only screen and (min-width: 801px) {
+    .size-xs { font-size: 0.6rem; }
+    .size-s { font-size: 1rem; }
+    .size-m { font-size: 1.3rem; }
+    .size-l { font-size: 1.6rem; }
+    .size-xl { font-size: 2rem; }
+}
+
+/* ----------------------------------------------------------------------------------------------- margins & paddings */
+.margin-sm { margin: 5pt;}
+.margin-md { margin: 10pt;}
+.margin-xl { margin: 15pt;}
+
+/* ----------------------------------------------------------------------------------------------------------- colors */
+.color-1 { color: #8EB9A8; }
+.color-2 { color: #FEFBD0; }
+.color-3 { color: #FDCFB7; }
+.color-4 { color: #F4828C; }
+.color-5 { color: #775D6A; }
+
+.bgcolor-1 { background-color: #8EB9A8; }
+.bgcolor-2 { background-color: #FEFBD0; }
+.bgcolor-3 { background-color: #FDCFB7; }
+.bgcolor-4 { background-color: #F4828C; }
+.bgcolor-5 { background-color: #775D6A; }
+
+/* ------------------------------------------------------------------------------------------------------- thumbnails */
+.meta-thumb {
+    overflow: hidden;
+    position: relative;
+}
+.thumb{
+    width: 100%;
+    height: auto;
+}
+.zoomable img{
+    transition: transform .3s ease-in-out;
+}
+.zoomable:hover img {
+    transform: scale(1.1);
+}
+.meta-thumb figcaption{
+    background-color: rgba(60,60,60,0.8);
+    color: white;
+    position: absolute;
+    bottom:-50%;
+    width: 100%;
+    height: 50%;
+    transition: transform .3s ease-in-out;
+}
+.meta-thumb:hover figcaption{
+    bottom:0;
+    z-index:1;
+}
+
+/* ------------------------------------------------------------------------------------------------ floating elements */
+.float-right {
+    float: right;
+}
+.float-clear {
+    clear: both;
+}
+/* ------------------------------------------------------------------------------------------------------------ debug */
+.wip {
+    border: 1px dotted green;
+    box-sizing: border-box;
+}

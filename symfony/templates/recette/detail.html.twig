@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Recette - {{ recette.name }}
+{% endblock %}
+{% block title %}
+    Receet - Recette - {{ recette.name }}
+{% endblock %}
+
+{% block body %}
+    <div class="meta-thumb float-right mob-12 tab-6 dsk-3">
+        <img class="thumb" src="{{ asset('uploads/img/recette/'~recette.illustration) }}">
+    </div>
+
+    <h2 class="size-xl margin-md">{{ recette.name }}</h2>
+
+    <h3 class="size-l margin-md">Description</h3>
+    <ul class="margin-md">
+        <li>Préparation: {{ recette.timePreparation }} minutes</li>
+        <li>Cuisson: {{ recette.timeCuisson }} minutes</li>
+    </ul>
+    <p class="margin-md">
+        {{ recette.description }}
+    </p>
+
+    <h3 class="size-l margin-md float-clear">Ingredients</h3>
+    <div class="grid mob-12 tab-12 dsk-12">
+        {% for link in recette.linksingredientrecette %}
+            {% include 'ingredient/thumb.html.twig' %}
+        {% endfor %}
+    </div>
+
+    <p class="margin-md">
+        {{ recette.steps }}
+    </p>
+{% endblock %}

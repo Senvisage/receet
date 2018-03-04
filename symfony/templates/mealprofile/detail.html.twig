@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Meal Profile - {{ mealprofile.lunch }}
+{% endblock %}
+{% block title %}
+    Receet - Meal Profile - {{ mealprofile.lunch }}
+{% endblock %}
+
+
+{% block body %}
+    L'User --mealprofile.user-- demande à créer un menu pour {{ mealprofile.nbPersonnes }} personnes et {{ mealprofile.nbJours }} jours.
+{% endblock %}

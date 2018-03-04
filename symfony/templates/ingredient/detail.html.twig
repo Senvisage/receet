@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Ingrédient - {{ ingredient.name }}
+{% endblock %}
+{% block title %}
+    Receet - Ingrédient - {{ ingredient.name }}
+{% endblock %}
+
+{% block body %}
+    <div class="meta-thumb float-right mob-12 tab-6 dsk-3">
+        <img class="thumb" src="{{ asset('uploads/img/ingredient/'~ingredient.illustration) }}">
+    </div>
+
+    <h2 class="size-xl margin-md">{{ ingredient.name }}</h2>
+
+    <h3 class="size-l margin-md">Informations</h3>
+    <ul class="margin-md">
+        <li>{{ ingredient.description }}</li>
+        <li>Unité: {{ ingredient.unit }}</li>
+        <li>Calories/unité: {{ ingredient.caloriesPerUnit }}</li>
+        <li>Où le trouver: {{ ingredient.rayon }}</li>
+        <li>Tags: {% for cur_tag in ingredient.tags %}{{ cur_tag | lower }} ; {% endfor %}</li>
+    </ul>
+
+    <h3 class="size-l margin-md float-clear">Utilisation</h3>
+    <div class="grid mob-12 tab-12 dsk-12">
+        {% for link in ingredient.linksingredientrecette %}
+            {% include 'recette/thumb.html.twig' %}
+        {% endfor %}
+    </div>
+{% endblock %}

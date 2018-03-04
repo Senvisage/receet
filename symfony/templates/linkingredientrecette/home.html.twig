@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Links I/R
+{% endblock %}
+{% block title %}
+    Receet - Links I/R
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for cur_link in linksingredientrecette %}
+            <li>
+                {{ cur_link.ingredient.name }} ({{ cur_link.quantity }}{{ cur_link.ingredient.unit }}) dans la recette "{{ cur_link.recette.name }}"
+            {% if is_granted('ROLE_USER') %}
+                (<a href="{{ path('linkingredientrecette_edit', {'id':cur_link.id}) }}">Edit</a> - <a href="{{ path('linkingredientrecette_delete', {'id':cur_link.id}) }}">Delete</a>)
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul><br>
+    <p><a href="{{ path('linkingredientrecette_add') }}">Ajouter un lien Ingredient/Recette</a></p>
+{% endblock %}

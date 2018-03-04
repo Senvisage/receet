@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Recette - {{ recette.name }}
+{% endblock %}
+{% block title %}
+    Receet - Recette - {{ recette.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ recette.name }}</h1>
+    <h2>Description</h2>
+    <ul>
+        <li>Préparation: {{ recette.timePreparation }} minutes</li>
+        <li>Cuisson: {{ recette.timeCuisson }} minutes</li>
+    </ul>
+    <h2>Ingredients</h2>
+    <ul>
+        {% for link in recette.linksingredientrecette %}
+            <li>{{ link.ingredient.name }} ({{ link.quantity }} {{ link.ingredient.unit }})</li>
+        {% endfor %}
+
+    </ul>
+
+    <p>
+        {{ recette.description }}
+    </p>
+    <p>
+    {{ recette.steps }}
+    </p>
+{% endblock %}

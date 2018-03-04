@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Utilisateurs
+{% endblock %}
+{% block title %}
+    Receet - Utilisateurs
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for cur_utilisateur in utilisateurs %}
+            <li>
+                {{ cur_utilisateur.username }} ({{ cur_utilisateur.email }})
+                {% if is_granted('ROLE_USER') %}
+                    (<a href="{{ path('utilisateur_edit', {'id':cur_utilisateur.id}) }}">Edit</a> - <a href="{{ path('utilisateur_delete', {'id':cur_utilisateur.id}) }}">Delete</a>)
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul><br/><a href="{{ path('utilisateur_add') }}">Ajouter un Utilisateur</a></p>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block head_title %}
+    Receet - Link I/R - "{{ linkingredientrecette.ingredient.name }}" dans "{{ linkingredientrecette.recette.name }}"
+{% endblock %}
+{% block title %}
+    Receet - Link I/R - "{{ linkingredientrecette.ingredient.name }}" dans "{{ linkingredientrecette.recette.name }}"
+{% endblock %}
+
+{% block body %}
+    <ul>
+        <li>Quantité: {{ linkingredientrecette.quantity }}</li>
+        <li>Recette: {{ linkingredientrecette.recette.name }}</li>
+        <li>Ingrédient: {{ linkingredientrecette.ingredient.name }}</li>
+    </ul>
+{% endblock %}
