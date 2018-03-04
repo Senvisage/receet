@@ -46,6 +46,20 @@ class MealProfileType extends AbstractType
                     'required'=>false
                 ]
             )
+            ->add("tags_mandatory",
+                TagsType::class,
+                [
+                    'attr'=>["placeholder"=>"Entrez les tags obligatoires ('vegetarien', 'hallal', ...)"],
+                    'required'=>false
+                ]
+            )
+            ->add("tags_forbidden",
+                TagsType::class,
+                [
+                    'attr'=>["placeholder"=>"Entrez les tags interdits ('viande', 'fruits à coque', ...)"],
+                    'required'=>false
+                ]
+            )
             ->add('utilisateur', EntityType::class, array(
                 'class'        => Utilisateur::class,
                 'choice_label' => 'username',
