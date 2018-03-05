@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receet</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/behaviours.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/snippets.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body class="row">
+
+    <header class="mob12 tab12 dsk12 row">
+        <p class="mob6 tab8 dsk10 pad-md">
+            Receet ! <span class="tab0 dsk0">(Mob)</span><span class="mob0 dsk0">(Tab)</span><span class="mob0 tab0">(Dsk)</span>
+        </p>
+        <p class="mob6 tab4 dsk2 pad-md">
+            Login
+        </p>
+    </header>
+
+    <div id="wrapper" class="row">
+        <aside class="mob0 tab4 dsk3 row">
+            <div id="searchBar" class="mob12 tab12 dsk12 pad-md">
+                <input class="mob12 tab12 dsk12 wip" type="text" placeholder="Rechercher une recette, un ingrédient, ..."/>
+            </div>
+            <div id="searchOptions" class="mob12 tab12 dsk12">
+                <div class="row pad-md">
+                    <input class="mob12 tab6 dsk3" type="number" placeholder="Nombre de personnes"/>
+                    <input class="mob12 tab6 dsk3" type="number" placeholder="Durée du menu à générer (jours)"/>
+                    <label class="mob6 tab6 dsk3"><input type="checkbox" name="checkbox" value="value">Midi</label>
+                    <label class="mob6 tab6 dsk3"><input type="checkbox" name="checkbox" value="value">Soir</label>
+                </div>
+                <div class="row pad-md">
+                    <input class="mob12 tab12 dsk12" type="text" placeholder="Tags obligatoires">
+                    <input class="mob12 tab12 dsk12" type="text" placeholder="Tags interdits">
+                </div>
+                <div class="row pad-md">
+                    <input class="mob12 tab12 dsk12" type="submit" value="Générer mon menu !">
+                </div>
+
+            </div>
+        </aside>
+        <main class="mob12 tab8 dsk8 pad-md">
+            <h2 class="size-xl">Une recette au hasard : Pates carbonara</h2>
+            <picture>
+                <source srcset="img/thumbs/pates-carbonara.jpg" media="(max-width: 800px)">    <!-- Mobile/Tablette -->
+                <source srcset="img/pates-carbonara.jpg">
+                <img src="img/pates-carbonara.jpg" alt="Pates Carbonara">
+            </picture>
+        </main>
+    </div>
+
+    <footer class="mob12 tab12 dsk12 pad-md">
+        PLACEHOLDER - FOOTER
+    </footer>
+</body>
+</html>
