@@ -11,14 +11,18 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 .notifHolder {
     width:300px;
 }
-.mySlides img {
-    width: 100%;
-}
-/*
-.slideContainer {
 
+.slideContainer {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
 }
 .slideContainer img {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*object-fit: contain;   /* fill | contain | cover | none | scale-down */
 }
-*/
