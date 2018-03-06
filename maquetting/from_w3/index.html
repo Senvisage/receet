@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<title>Receet !</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link rel="stylesheet" href="css/behaviours.css">
+
+<body class="w3-theme-l5">
+
+<div class="w3-top"><!-- Navbar -->
+    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i><span class="w3-badge w3-right w3-small w3-green"><i class="fa fa-bell"></i></span></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4">Receet</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">2</span></button>
+            <div id="notifHolder" class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Deux nouvelles recettes à tester !</a>
+                <a href="#" class="w3-bar-item w3-button">Votre dernier menu arrive bientôt à terme... En regénérer un ?</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Recettes"><i class="fa fa-birthday-cake"></i> Recettes</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Ingrédients"><i class="fa fa-lemon"></i> Ingrédients</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Générer un menu"><i class="fa fa-utensils"></i> Générer un menu</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Mon Profil">
+            <img src="img/avatar2.png" class="w3-circle avatarBadge" alt="Avatar">
+        </a>
+    </div>
+</div><!-- End Navbar -->
+<div id="navMobile" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large"><!-- Navbar on small screens -->
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Placeholder</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-bell"></i> Notifications<span class="w3-badge w3-right w3-small w3-green">2</span></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-birthday-cake"></i> Recettes</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-lemon"></i> Ingrédients</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-utensils"></i> Générer un menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-user"></i> Mon Profil</a>
+</div><!-- End Navbar on small screens -->
+
+<div class="w3-container w3-content widther"><!-- Page Container -->
+    <div class="w3-row"><!-- The Grid -->
+
+        <div class="w3-col m4"><!-- Left Column -->
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding w3-row">
+                            <h4 class="w3-center">Générer mon menu</h4><hr>
+
+                            <input class="w3-input w3-border w3-round-large w3-col s12 m6 l3" type="number" placeholder="Bouches"/>
+                            <input class="w3-input w3-border w3-round-large w3-col s12 m6 l3" type="number" placeholder="Durée"/>
+                            <label class="w3-col s6 m6 l3"><input class="w3-check" type="checkbox" name="checkbox" checked="checked">Midi</label>
+                            <label class="w3-col s6 m6 l3"><input class="w3-check" type="checkbox" name="checkbox" checked="checked">Soir</label>
+                            <input class="w3-input w3-border w3-round-large s12" type="text" placeholder="Tags obligatoires">
+                            <input class="w3-input w3-border w3-round-large s12" type="text" placeholder="Tags interdits">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+        </div><!-- End Left Column -->
+
+        <div class="w3-col m8"><!-- Main Column -->
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding">
+                            <h4>Quelques recettes au hasard :</h4><hr>
+
+                            <!-- Carousel Recettes -->
+                            <div class="w3-display-container">
+                                <div class="w3-display-container w3-center mySlides">
+                                    <img src="img/pates-carbonara.jpg">
+                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
+                                        <h3>Pates Carbonara</h3>
+                                        <p><b>Une recette simple et efficace !</b></p>
+                                    </div>
+                                </div>
+                                <div class="w3-display-container w3-center mySlides">
+                                    <div class="slideContainer">
+                                        <img src="img/bolognaise.jpg">
+                                    </div>
+                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
+                                        <h3>Pates Bolognaise</h3>
+                                        <p><b>Assez longue à préparer, mais elle en vaut largement la peine !</b></p>
+                                    </div>
+                                </div>
+                                <div class="w3-display-container w3-center mySlides">
+                                    <div class="slideContainer">
+                                        <img src="img/hamburger.jpg">
+                                    </div>
+                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
+                                        <h3>Hamburgers Maison</h3>
+                                        <p><b>Pourquoi sortir et aller au fast-food ?</b></p>
+                                    </div>
+                                </div>
+                                <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                                <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+                            </div><!-- End Carousel Recettes -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Main Column -->
+    </div><!-- End The Grid -->
+</div><!-- End Page Container -->
+<br>
+
+<footer class="w3-container w3-theme-d3 w3-padding-8">
+    <h5>Footer</h5>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

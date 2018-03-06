@@ -1,0 +1,24 @@
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+
+.avatarBadge {
+    height:23px;
+    width:23px;
+}
+.widther {
+    max-width:1400px;
+    margin-top:80px;
+}
+.notifHolder {
+    width:300px;
+}
+.mySlides img {
+    width: 100%;
+}
+/*
+.slideContainer {
+
+}
+.slideContainer img {
+
+}
+*/
