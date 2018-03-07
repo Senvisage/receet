@@ -1,3 +1,7 @@
+.wip {
+    border: 1px dotted green;
+}
+
 html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 
 .avatarBadge {
@@ -12,6 +16,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
     width:300px;
 }
 
+/* --------------------------------------------------------------------------------------------------------- Carousel */
 .slideContainer {
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
@@ -19,10 +24,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
     overflow: hidden;
 }
 .slideContainer img {
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     /*object-fit: contain;   /* fill | contain | cover | none | scale-down */
+}
+.slideContainer:hover img{
+    zoom: 1.1;
+}
+
+/* --------------------------------------------------------------------------------------------------------- Listings */
+.listing {
+    display:flex;
+    flex-flow: row wrap;
 }

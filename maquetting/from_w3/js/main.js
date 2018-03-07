@@ -12,7 +12,7 @@ function openNav() {
 
 var slideIndex = 1;
 showDivs(slideIndex);
-//autoRoll();
+autoRoll();
 
 function autoRoll() {
     plusDivs(1);

@@ -43,65 +43,80 @@
 <div class="w3-container w3-content widther"><!-- Page Container -->
     <div class="w3-row"><!-- The Grid -->
 
-        <div class="w3-col m4"><!-- Left Column -->
-            <div class="w3-row-padding">
-                <div class="w3-col m12">
-                    <div class="w3-card w3-round w3-white">
-                        <div class="w3-container w3-padding w3-row">
-                            <h4 class="w3-center">Générer mon menu</h4><hr>
-
-                            <input class="w3-input w3-border w3-round-large w3-col s12 m6 l3" type="number" placeholder="Bouches"/>
-                            <input class="w3-input w3-border w3-round-large w3-col s12 m6 l3" type="number" placeholder="Durée"/>
-                            <label class="w3-col s6 m6 l3"><input class="w3-check" type="checkbox" name="checkbox" checked="checked">Midi</label>
-                            <label class="w3-col s6 m6 l3"><input class="w3-check" type="checkbox" name="checkbox" checked="checked">Soir</label>
-                            <input class="w3-input w3-border w3-round-large s12" type="text" placeholder="Tags obligatoires">
-                            <input class="w3-input w3-border w3-round-large s12" type="text" placeholder="Tags interdits">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br/>
-        </div><!-- End Left Column -->
-
-        <div class="w3-col m8"><!-- Main Column -->
+        <div class="w3-col m12"><!-- Main Column -->
             <div class="w3-row-padding">
                 <div class="w3-col m12">
                     <div class="w3-card w3-round w3-white">
                         <div class="w3-container w3-padding">
-                            <h4>Quelques recettes au hasard :</h4><hr>
+                            <h4>Nos recettes :</h4><hr>
 
-                            <!-- Carousel Recettes -->
-                            <div class="w3-display-container">
-                                <div class="w3-display-container w3-center mySlides">
+                            <div class="w3-row-padding w3-padding-16 w3-center listing"><!-- Photo Grid-->
+                                <div class="w3-quarter ">
                                     <div class="slideContainer">
                                         <img src="img/pates-carbonara.jpg">
                                     </div>
-                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
-                                        <h3>Pates Carbonara</h3>
-                                        <p><b>Une recette simple et efficace !</b></p>
-                                    </div>
+                                    <h3>Pates Carbonara</h3>
+                                    <p>Une recette simple et efficace !</p>
                                 </div>
-                                <div class="w3-display-container w3-center mySlides">
+                                <div class="w3-quarter ">
                                     <div class="slideContainer">
                                         <img src="img/bolognaise.jpg">
                                     </div>
-                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
-                                        <h3>Pates Bolognaise</h3>
-                                        <p><b>Assez longue à préparer, mais elle en vaut largement la peine !</b></p>
-                                    </div>
+                                    <h3>Pates Bolognaise</h3>
+                                    <p>Assez longue à préparer, mais elle en vaut largement la peine !</p>
                                 </div>
-                                <div class="w3-display-container w3-center mySlides">
+                                <div class="w3-quarter ">
                                     <div class="slideContainer">
                                         <img src="img/hamburger.jpg">
                                     </div>
-                                    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small w3-black w3-opacity-min">
-                                        <h3>Hamburgers Maison</h3>
-                                        <p><b>Pourquoi sortir et aller au fast-food ?</b></p>
-                                    </div>
+                                    <h3>Hamburgers Maison</h3>
+                                    <p>Pourquoi sortir et aller au fast-food ?</p>
                                 </div>
-                                <button class="w3-button w3-display-left w3-black w3-opacity-min" onclick="plusDivs(-1)">&#10094;</button>
-                                <button class="w3-button w3-display-right w3-black w3-opacity-min" onclick="plusDivs(1)">&#10095;</button>
-                            </div><!-- End Carousel Recettes -->
+
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/pates-carbonara.jpg">
+                                    </div>
+                                    <h3>Pates Carbonara</h3>
+                                    <p>Une recette simple et efficace !</p>
+                                </div>
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/bolognaise.jpg">
+                                    </div>
+                                    <h3>Pates Bolognaise</h3>
+                                    <p>Assez longue à préparer, mais elle en vaut largement la peine !</p>
+                                </div>
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/hamburger.jpg">
+                                    </div>
+                                    <h3>Hamburgers Maison</h3>
+                                    <p>Pourquoi sortir et aller au fast-food ?</p>
+                                </div>
+
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/pates-carbonara.jpg">
+                                    </div>
+                                    <h3>Pates Carbonara</h3>
+                                    <p>Une recette simple et efficace !</p>
+                                </div>
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/bolognaise.jpg">
+                                    </div>
+                                    <h3>Pates Bolognaise</h3>
+                                    <p>Assez longue à préparer, mais elle en vaut largement la peine !</p>
+                                </div>
+                                <div class="w3-quarter ">
+                                    <div class="slideContainer">
+                                        <img src="img/hamburger.jpg">
+                                    </div>
+                                    <h3>Hamburgers Maison</h3>
+                                    <p>Pourquoi sortir et aller au fast-food ?</p>
+                                </div>
+                            </div><!-- End Photo Grid-->
 
                         </div>
                     </div>
