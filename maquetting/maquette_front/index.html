@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Receet</title>
-    <link href="css/reset.css" rel="stylesheet">
-    <link href="css/behaviours.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/snippets.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-</head>
-<body class="row">
-
-    <header class="mob12 tab12 dsk12 row">
-        <p class="mob6 tab8 dsk10 pad-md">
-            Receet ! <span class="tab0 dsk0">(Mob)</span><span class="mob0 dsk0">(Tab)</span><span class="mob0 tab0">(Dsk)</span>
-        </p>
-        <p class="mob6 tab4 dsk2 pad-md">
-            Login
-        </p>
-    </header>
-
-    <div id="wrapper" class="row">
-        <aside class="mob0 tab4 dsk3 row">
-            <div id="searchBar" class="mob12 tab12 dsk12 pad-md">
-                <input class="mob12 tab12 dsk12 wip" type="text" placeholder="Rechercher une recette, un ingrédient, ..."/>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Receet</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Menu de la semaine"><i class="fa fa-cutlery"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+                <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                    <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                    <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+                    <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+                </div>
             </div>
-            <div id="searchOptions" class="mob12 tab12 dsk12">
-                <div class="row pad-md">
-                    <input class="mob12 tab6 dsk3" type="number" placeholder="Nombre de personnes"/>
-                    <input class="mob12 tab6 dsk3" type="number" placeholder="Durée du menu à générer (jours)"/>
-                    <label class="mob6 tab6 dsk3"><input type="checkbox" name="checkbox" value="value">Midi</label>
-                    <label class="mob6 tab6 dsk3"><input type="checkbox" name="checkbox" value="value">Soir</label>
-                </div>
-                <div class="row pad-md">
-                    <input class="mob12 tab12 dsk12" type="text" placeholder="Tags obligatoires">
-                    <input class="mob12 tab12 dsk12" type="text" placeholder="Tags interdits">
-                </div>
-                <div class="row pad-md">
-                    <input class="mob12 tab12 dsk12" type="submit" value="Générer mon menu !">
-                </div>
-
-            </div>
-        </aside>
-        <main class="mob12 tab8 dsk8 pad-md">
-            <h2 class="size-xl">Une recette au hasard : Pates carbonara</h2>
-            <picture>
-                <source srcset="img/thumbs/pates-carbonara.jpg" media="(max-width: 800px)">    <!-- Mobile/Tablette -->
-                <source srcset="img/pates-carbonara.jpg">
-                <img src="img/pates-carbonara.jpg" alt="Pates Carbonara">
-            </picture>
-        </main>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+                <img src="img/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+            </a>
+        </div>
     </div>
 
-    <footer class="mob12 tab12 dsk12 pad-md">
-        PLACEHOLDER - FOOTER
-    </footer>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">PLACEHOLDER</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-cutlery"></i> Menu de la semaine</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    </div>
+
+<!-- =================================================== Scripts =================================================== -->
+    <script>
+        // Accordion
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme-d1";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+            }
+        }
+
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
 </body>
 </html>
