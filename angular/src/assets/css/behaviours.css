@@ -1,26 +1,57 @@
-/* ------------------------------------------------------------------------------------------------------- Behaviours */
-.size-xs { font-size: 0.6rem; }
-.size-s { font-size: 0.8rem; }
-.size-m { font-size: 1rem; }
-.size-l { font-size: 1.2rem; }
-.size-xl { font-size: 1.4rem; }
+.wip {
+    border: 1px dotted green;
+}
 
-.color-1 { color: #8EB9A8; }
-.color-2 { color: #FEFBD0; }
-.color-3 { color: #FDCFB7; }
-.color-4 { color: #F4828C; }
-.color-5 { color: #775D6A; }
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 
-.bgcolor-1 { background-color: #8EB9A8; }
-.bgcolor-2 { background-color: #FEFBD0; }
-.bgcolor-3 { background-color: #FDCFB7; }
-.bgcolor-4 { background-color: #F4828C; }
-.bgcolor-5 { background-color: #775D6A; }
+.avatarBadge {
+    height:23px;
+    width:23px;
+}
+.widther {
+    max-width:1400px;
+    margin-top:80px;
+}
+.notifHolder {
+    width:300px;
+}
 
-.shadow { box-shadow: 1px 2px 14px -5px rgba(120,120,120,0.75); }
-.centered { display: flex; justify-content: center; align-items: center; }
+/* --------------------------------------------------------------------------------------------------------- Carousel */
+.slideContainer {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+}
+.slideContainer img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /*object-fit: contain;   /* fill | contain | cover | none | scale-down */
+}
+.slideContainer .slideHover {
+    width: 100%;
+    height:100%;
+    overflow:hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+    opacity:0;
+    /*object-fit: contain;   /* fill | contain | cover | none | scale-down */
+}
+.slideContainer:hover .slideHover {
+    top: 0;
+    opacity:0.7;
+}
 
-.margin-sm { margin: 5pt;}
-.margin-md { margin: 10pt;}
-.margin-xl { margin: 15pt;}
-
+/* --------------------------------------------------------------------------------------------------------- Listings */
+.listing {
+    display:flex;
+    flex-flow: row wrap;
+}
