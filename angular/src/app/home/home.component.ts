@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recette }            from '../../entities/recette';
+import { ReceetApiService }   from '../receet-api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,39 +8,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  private recettes: Recette[];
   private slideIndex:number;
-  private slides: HTMLCollectionOf<Element>;
-  private currentSlide: Element;
+  private currentSlide: Recette;
   private timePerSlide: number;
 
-  constructor() {
-    private plusDivs = this.plusDivs.bind(this);
-  }
+  constructor(private receetApiService: ReceetApiService) {}
   ngOnInit() {
-    this.slideIndex = 1;
-    this.slides = document.getElementsByClassName("mySlides");
-    this.currentSlide = this.slides[this.slideIndex];
+    this.currentSlide = null;
+    this.getRecettes();
+
+    this.slideIndex = 0;
     this.timePerSlide = 4000;
-    this.showDivs(this.slideIndex);
-    this.autoRoll();
   }
 
-  private autoRoll() {
-    this.plusDivs(this.slideIndex);
-    setTimeout(this.autoRoll, this.timePerSlide);
+  getRecettes(): void {
+    this.receetApiService.getRecettes()
+        .subscribe(
+            data => {
+              this.recettes = data;
+              this.refreshSlide();
+            });
   }
-  private plusDivs(n:number) {
-    if(n === undefined)
-      n = 1;
-    this.showDivs(this.slideIndex += n);
-  }
-  private showDivs(n) {
-    let i;
-    if (n > this.slides.length) {this.slideIndex = 1;}
-    if (n < 1) {this.slideIndex = this.slides.length;}
-    for (i = 0; i < this.slides.length; i++) {
-      this.slides[i].style.display = "none";
+  changeDiv(n: number):void {
+    this.slideIndex += n;
+    if (this.slideIndex >= this.recettes.length) {
+      this.slideIndex = 0;
     }
-    this.slides[0].style.display = "block";
+    if (this.slideIndex < 0) {
+      this.slideIndex = this.recettes.length-1;
+    }
+    this.refreshSlide();
   }
+
+  refreshSlide(): void {
+    this.currentSlide = this.recettes[this.slideIndex];
+  }
+
 }

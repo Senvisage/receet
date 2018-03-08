@@ -7,4 +7,5 @@ export class Recette {
     steps: string;
     illustration: string;
     linksingredientrecette: string[];
+    tags: string;
 }

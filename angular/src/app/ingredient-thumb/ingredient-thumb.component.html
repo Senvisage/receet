@@ -1,8 +1,11 @@
 <div>
-  <h2>Name</h2>
-  - Tags<br/>
-  - Illustration<br/>
-  - Header<br/>
-  - Headline<br/>
-  - Actions<br/>
+  <div class="slideContainer">
+    <img src="{{ ingredient.illustration }}">
+    <div class="slideHover w3-theme-l5 w3-opacity-max">
+      <p>
+        <span class="w3-tag w3-small w3-theme-d5">{{ingredient.tags}}</span>
+      </p>
+    </div>
+  </div>
+  <h3>{{ ingredient.name }}</h3>
 </div>

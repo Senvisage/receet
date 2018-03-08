@@ -15,7 +15,7 @@ class RecetteFixtures extends Fixture{
         $recette01->setTimePreparation(5);
         $recette01->setTimeCuisson(15);
         $recette01->setSteps('Lorem ipsum dolor sit amet ');
-        $recette01->setIllustration('13d24239605777f012d6da0c386c7212.jpeg');
+        $recette01->setIllustration('uploads/img/recette/bolognaise.jpg');
         $recette01->addTag($recette01->getName());
         $recette01->addTag('sur le pouce');
         $recette01->addTag('facile à réaliser');
@@ -27,7 +27,7 @@ class RecetteFixtures extends Fixture{
         $recette02->setTimePreparation(20);
         $recette02->setTimeCuisson(15);
         $recette02->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette02->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette02->setIllustration('uploads/img/recette/hamburger.jpg');
         $recette02->addTag($recette02->getName());
         $recette02->addTag('adaptable');
         $manager->persist($recette02);
@@ -38,7 +38,7 @@ class RecetteFixtures extends Fixture{
         $recette03->setTimePreparation(20);
         $recette03->setTimeCuisson(15);
         $recette03->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette03->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette03->setIllustration('uploads/img/recette/lasagnes-saumon-epinard.jpg');
         $recette03->addTag($recette03->getName());
         $recette03->addTag('adaptable');
         $manager->persist($recette03);
@@ -49,7 +49,7 @@ class RecetteFixtures extends Fixture{
         $recette04->setTimePreparation(20);
         $recette04->setTimeCuisson(15);
         $recette04->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette04->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette04->setIllustration('uploads/img/recette/pates-carbonara.jpg');
         $recette04->addTag($recette04->getName());
         $recette04->addTag('adaptable');
         $manager->persist($recette04);
@@ -60,7 +60,7 @@ class RecetteFixtures extends Fixture{
         $recette05->setTimePreparation(20);
         $recette05->setTimeCuisson(15);
         $recette05->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette05->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette05->setIllustration('uploads/img/recette/turducken.jpg');
         $recette05->addTag($recette05->getName());
         $recette05->addTag('adaptable');
         $manager->persist($recette05);
@@ -71,7 +71,7 @@ class RecetteFixtures extends Fixture{
         $recette06->setTimePreparation(20);
         $recette06->setTimeCuisson(15);
         $recette06->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette06->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette06->setIllustration('uploads/img/recette/bolognaise.jpg');
         $recette06->addTag($recette06->getName());
         $recette06->addTag('adaptable');
         $manager->persist($recette06);
@@ -82,7 +82,7 @@ class RecetteFixtures extends Fixture{
         $recette07->setTimePreparation(20);
         $recette07->setTimeCuisson(15);
         $recette07->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette07->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette07->setIllustration('uploads/img/recette/hamburger.jpg');
         $recette07->addTag($recette07->getName());
         $recette07->addTag('adaptable');
         $manager->persist($recette07);
@@ -93,7 +93,7 @@ class RecetteFixtures extends Fixture{
         $recette08->setTimePreparation(20);
         $recette08->setTimeCuisson(15);
         $recette08->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette08->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette08->setIllustration('uploads/img/recette/lasagnes-saumon-epinard.jpg');
         $recette08->addTag($recette08->getName());
         $recette08->addTag('adaptable');
         $manager->persist($recette08);
@@ -104,7 +104,7 @@ class RecetteFixtures extends Fixture{
         $recette09->setTimePreparation(20);
         $recette09->setTimeCuisson(15);
         $recette09->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette09->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette09->setIllustration('uploads/img/recette/pates-carbonara.jpg');
         $recette09->addTag($recette09->getName());
         $recette09->addTag('adaptable');
         $manager->persist($recette09);
@@ -115,7 +115,7 @@ class RecetteFixtures extends Fixture{
         $recette10->setTimePreparation(20);
         $recette10->setTimeCuisson(15);
         $recette10->setSteps('Cuire les pâtes, faire réduire les lardons, dorer les oignons, etc...');
-        $recette10->setIllustration('a29d89171542e474d7bb09dec663ef83.jpeg');
+        $recette10->setIllustration('uploads/img/recette/turducken.jpg');
         $recette10->addTag($recette10->getName());
         $recette10->addTag('adaptable');
         $manager->persist($recette10);

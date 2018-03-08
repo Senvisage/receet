@@ -15,7 +15,7 @@ class IngredientFixtures extends Fixture{
         $ingredient01->setUnit('g.');
         $ingredient01->setCaloriesPerUnit(2);
         $ingredient01->setRayon('Riz & pâtes');
-        $ingredient01->setIllustration('uploads/img/ingredient/14b4de8f38079939c280861ea000e23a.jpeg');
+        $ingredient01->setIllustration('uploads/img/ingredient/citron.jpg');
         $ingredient01->addTag($ingredient01->getName());
         $ingredient01->addTag('gluten');
         $ingredient01->addTag('feculent');
@@ -28,7 +28,7 @@ class IngredientFixtures extends Fixture{
         $ingredient02->setUnit('g.');
         $ingredient02->setCaloriesPerUnit(1.2);
         $ingredient02->setRayon('Riz & pâtes');
-        $ingredient02->setIllustration('uploads/img/ingredient/a64acaba722b211be561061219469701.jpeg');
+        $ingredient02->setIllustration('uploads/img/ingredient/creme-fraiche.jpg');
         $ingredient02->addTag($ingredient02->getName());
         $ingredient02->addTag('feculent');
         $manager->persist($ingredient02);
@@ -39,7 +39,7 @@ class IngredientFixtures extends Fixture{
         $ingredient03->setUnit('g.');
         $ingredient03->setCaloriesPerUnit(4);
         $ingredient03->setRayon('Cuisine du Monde');
-        $ingredient03->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient03->setIllustration('uploads/img/ingredient/lardons.jpg');
         $ingredient03->addTag($ingredient03->getName());
         $ingredient03->addTag('rare');
         $ingredient03->addTag('nourriture-transformee');
@@ -51,7 +51,7 @@ class IngredientFixtures extends Fixture{
         $ingredient04->setUnit('g.');
         $ingredient04->setCaloriesPerUnit(4);
         $ingredient04->setRayon('Cuisine du Monde');
-        $ingredient04->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient04->setIllustration('uploads/img/ingredient/pates.jpg');
         $ingredient04->addTag($ingredient04->getName());
         $ingredient04->addTag('rare');
         $ingredient04->addTag('nourriture-transformee');
@@ -63,7 +63,7 @@ class IngredientFixtures extends Fixture{
         $ingredient05->setUnit('g.');
         $ingredient05->setCaloriesPerUnit(4);
         $ingredient05->setRayon('Cuisine du Monde');
-        $ingredient05->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient05->setIllustration('uploads/img/ingredient/persil.jpg');
         $ingredient05->addTag($ingredient05->getName());
         $ingredient05->addTag('rare');
         $ingredient05->addTag('nourriture-transformee');
@@ -75,7 +75,7 @@ class IngredientFixtures extends Fixture{
         $ingredient06->setUnit('g.');
         $ingredient06->setCaloriesPerUnit(4);
         $ingredient06->setRayon('Cuisine du Monde');
-        $ingredient06->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient06->setIllustration('uploads/img/ingredient/citron.jpg');
         $ingredient06->addTag($ingredient06->getName());
         $ingredient06->addTag('rare');
         $ingredient06->addTag('nourriture-transformee');
@@ -87,7 +87,7 @@ class IngredientFixtures extends Fixture{
         $ingredient07->setUnit('g.');
         $ingredient07->setCaloriesPerUnit(4);
         $ingredient07->setRayon('Cuisine du Monde');
-        $ingredient07->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient07->setIllustration('uploads/img/ingredient/creme-fraiche.jpg');
         $ingredient07->addTag($ingredient07->getName());
         $ingredient07->addTag('rare');
         $ingredient07->addTag('nourriture-transformee');
@@ -99,7 +99,7 @@ class IngredientFixtures extends Fixture{
         $ingredient08->setUnit('g.');
         $ingredient08->setCaloriesPerUnit(4);
         $ingredient08->setRayon('Cuisine du Monde');
-        $ingredient08->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient08->setIllustration('uploads/img/ingredient/lardons.jpg');
         $ingredient08->addTag($ingredient08->getName());
         $ingredient08->addTag('rare');
         $ingredient08->addTag('nourriture-transformee');
@@ -111,7 +111,7 @@ class IngredientFixtures extends Fixture{
         $ingredient09->setUnit('g.');
         $ingredient09->setCaloriesPerUnit(4);
         $ingredient09->setRayon('Cuisine du Monde');
-        $ingredient09->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient09->setIllustration('uploads/img/ingredient/pates.jpg');
         $ingredient09->addTag($ingredient09->getName());
         $ingredient09->addTag('rare');
         $ingredient09->addTag('nourriture-transformee');
@@ -123,7 +123,7 @@ class IngredientFixtures extends Fixture{
         $ingredient10->setUnit('g.');
         $ingredient10->setCaloriesPerUnit(4);
         $ingredient10->setRayon('Cuisine du Monde');
-        $ingredient10->setIllustration('uploads/img/ingredient/45140b19331835b6f2d4e99472b8ab07.jpeg');
+        $ingredient10->setIllustration('uploads/img/ingredient/persil.jpg');
         $ingredient10->addTag($ingredient10->getName());
         $ingredient10->addTag('rare');
         $ingredient10->addTag('nourriture-transformee');

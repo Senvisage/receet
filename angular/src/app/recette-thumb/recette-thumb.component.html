@@ -1,8 +1,13 @@
-<div>
-  <h2 class="size-l">{{ recette.name }}</h2>
-  <div>
-    - Tags : <br/>
-    - Details<br/>
+<div class="">
+  <div class="slideContainer">
+    <img src="{{ recette.illustration }}">
+    <div class="slideHover w3-theme-l5 w3-opacity-max">
+      <p>Une dinde, fourrée d'un canard, fourré d'un poulet... Vraiment ?</p>
+      <p>
+        <span class="w3-tag w3-small w3-theme-d5">{{ recette.tags }}</span>
+        <button (click)="rerollRecette($event)">Reroll</button>
+      </p>
+    </div>
   </div>
-  <button (click)="rerollRecette($event)">Reroll</button>
+  <h3>{{ recette.name }}</h3>
 </div>
