@@ -48,7 +48,7 @@ class ApiRecetteController extends Controller
         $recette = $this->getDoctrine()
             ->getRepository(Recette::class)
             ->findOneByIdFull($id);
-        //$recette->setIllustration($request->getUriForPath('/'.$recette->getIllustration()));
+        $recette->setIllustration($request->getUriForPath('/'.$recette->getIllustration()));
 
         $encoder = new JsonEncoder();
         $normalizer = new ObjectNormalizer();
@@ -71,7 +71,7 @@ class ApiRecetteController extends Controller
         $recette = $this->getDoctrine()
             ->getRepository(Recette::class)
             ->findOneByRandom();
-        //$recette->setIllustration($request->getUriForPath('/'.$recette->getIllustration()));
+        $recette->setIllustration($request->getUriForPath('/'.$recette->getIllustration()));
 
         $encoder = new JsonEncoder();
         $normalizer = new ObjectNormalizer();

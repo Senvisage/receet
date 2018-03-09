@@ -12,6 +12,7 @@ import { ReceetApiService }         from './receet-api.service';
 import { IngredientThumbComponent } from './ingredient-thumb/ingredient-thumb.component';
 import { RecetteThumbComponent }    from './recette-thumb/recette-thumb.component';
 import { HomeComponent } from './home/home.component';
+import { RecetteComponent } from './recette/recette.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     RecettesComponent,
     IngredientThumbComponent,
     RecetteThumbComponent,
-    HomeComponent
+    HomeComponent,
+    RecetteComponent
   ],
   imports: [
     AppRoutingModule,

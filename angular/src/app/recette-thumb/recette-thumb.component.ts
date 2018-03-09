@@ -16,9 +16,7 @@ export class RecetteThumbComponent implements OnInit {
   constructor() {
     this.onreroll = new EventEmitter<any>();
   }
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   rerollRecette() {
     this.onreroll.emit(this.recette);

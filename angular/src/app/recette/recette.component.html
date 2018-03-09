@@ -1,0 +1,45 @@
+<div class="w3-container w3-content widther"><!-- Page Container -->
+  <div class="w3-row"><!-- The Grid -->
+
+    <div class="w3-col m4"><!-- Left Column -->
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding w3-row">
+              <h4 class="w3-center">Ingrédients</h4><hr>
+              <ul>
+                <li>Riz</li>
+                <li>Algues Nori</li>
+                <li>Vinaigre de riz</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+    </div><!-- End Left Column -->
+
+    <div class="w3-col m8"><!-- Main Column -->
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div *ngIf="recette !== null" class="w3-container w3-padding">
+              <h4>Recette #{{recette.id}} : {{recette.name}}</h4><hr>
+
+              <img src="{{recette.illustration}}" class="w3-right w3-half">
+              <p>{{recette.timePreparation}} minutes de préparation</p>
+              <p>{{recette.timeCuisson}} minutes de cuisson</p>
+
+
+              <p>{{recette.description}}</p>
+              <p class="w3-clear">{{recette.steps}}</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Main Column -->
+
+  </div><!-- End The Grid -->
+</div><!-- End Page Container -->
+<br>

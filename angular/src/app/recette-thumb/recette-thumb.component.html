@@ -1,13 +1,15 @@
 <div class="">
-  <div class="slideContainer">
-    <img src="{{ recette.illustration }}">
-    <div class="slideHover w3-theme-l5 w3-opacity-max">
-      <p>Une dinde, fourrée d'un canard, fourré d'un poulet... Vraiment ?</p>
-      <p>
-        <span class="w3-tag w3-small w3-theme-d5">{{ recette.tags }}</span>
-        <button (click)="rerollRecette($event)">Reroll</button>
-      </p>
+  <a routerLink="/recette/{{ recette.id }}">
+    <div class="slideContainer">
+      <img src="{{ recette.illustration }}">
+      <div class="slideHover w3-theme-l5 w3-opacity-max">
+        <p>{{ recette.description }}</p>
+        <p>
+          <span *ngFor="let cur_tag of recette.tags" class="w3-tag w3-small w3-theme-d5">{{ cur_tag }}</span><br>
+          <button (click)="rerollRecette($event)">Reroll</button>
+        </p>
+      </div>
     </div>
-  </div>
+  </a>
   <h3>{{ recette.name }}</h3>
 </div>
