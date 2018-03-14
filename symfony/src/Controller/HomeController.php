@@ -13,9 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        /**/
-            //$this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page !');
-        /**/
+        //$this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page !');
         return $this->render('home/home.html.twig');
     }
 }
